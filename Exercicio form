@@ -1,0 +1,13 @@
+drop schema if exists venda;
+create schema venda;
+use venda;
+create table cliente(id int primary key auto_increment, nomeCliente varchar(50), endereco varchar(50), cidade varchar(50), pais varchar(50));
+create table produto(id int primary key auto_increment, nomeProduto varchar(50), precoProduto decimal, codigoProduto varchar(4) unique not null);
+create table vendaForm(venda int primary key auto_increment, clienteId int, produtoId int, foreign key (clienteId) references cliente(id), foreign key (produtoId) references produto(id), quantidade int unsigned not null, vendaData date);
+
+select * from (select venda, cliente.id as clienteId, produto.id as produtoId, nomeCliente, endereco as clienteEnderaco, cidade as clienteCidade, pais as clientePais, vendaData, codigoProduto, nomeProduto, quantidade, precoProduto
+			   from vendaForm
+               inner join cliente
+               on vendaForm.clienteId = cliente.id
+               inner join produto
+               on vendaForm.produtoId = produto.id) as tabelaca;
