@@ -1,0 +1,12 @@
+drop schema if exists whatsapp;
+create schema whatsapp;
+use whatsapp;
+
+create table usuarios (id int primary key auto_increment, nome varchar(50), numero bigint);
+create table texto (id int primary key auto_increment, texto text(2000));
+create table arquivos (id int primary key auto_increment, arquivo blob);
+create table mensagens (id int primary key auto_increment, id_usuario int, id_text int, id_arquivo int, foreign key (id_usuario) references usuarios (id), foreign key (id_text) references texto(id), foreign key (id_arquivo) references arquivos (id));
+
+create table mensagens_favoritas (id int primary key auto_increment, id_usuario int, id_mensagem int, foreign key (id_usuario) references usuarios (id), foreign key (id_mensagem) references mensagens (id));
+create table grupos (id int primary key auto_increment, id_membro int, id_mensagem int, grupo_nome varchar(50), foreign key (id_membro) references usuarios (id), foreign key (id_mensagem) references mensagens(id));
+create table stats (id int primary key auto_increment, id_usuario int, id_mensagem int, foreign key (id_usuario) references usuarios (id), foreign key (id_mensagem) references mensagens (id));
