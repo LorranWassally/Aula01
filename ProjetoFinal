@@ -15,26 +15,26 @@ create table grupos (id int primary key auto_increment, id_mensagem int, grupo_n
 create table membros_grupo (id int primary key auto_increment, id_membros int, id_grupo int, foreign key (id_grupo) references grupos (id), foreign key (id_membros) references usuarios (id));
 create table atualizacoes (id int primary key auto_increment, id_usuario int, id_mensagem int, foreign key (id_usuario) references usuarios (id), foreign key (id_mensagem) references mensagens (id));
 
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (21, 'Felipe Oliveira', '111111111', 'Descrição 31');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (22, 'Juliana Santos', '222222222', 'Descrição 32');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (23, 'Renato Silva', '333333333', 'Descrição 33');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (24, 'Natália Pereira', '444444444', 'Descrição 34');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (25, 'Thiago Lima', '555555555', 'Descrição 35');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (26, 'Lívia Oliveira', '666666666', 'Descrição 36');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (27, 'Pedro Santos', '777777777', 'Descrição 37');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (28, 'Mariano Silva', '888888888', 'Descrição 38');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (29, 'Vanessa Lima', '999999999', 'Descrição 39');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (30, 'Beatriz Oliveira', '1010101010', 'Descrição 40');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (31, 'Ricardo Santos', '1111111111', 'Descrição 41');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (32, 'Aline Pereira', '1212121212', 'Descrição 42');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (33, 'Luciana Lima', '1313131313', 'Descrição 43');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (34, 'Gustavo Silva', '1414141414', 'Descrição 44');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (35, 'Fernando Santos', '1515151515', 'Descrição 45');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (36, 'Roberta Oliveira', '1616161616', 'Descrição 46');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (37, 'Diego Lima', '1717171717', 'Descrição 47');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (38, 'Carla Pereira', '1818181818', 'Descrição 48');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (39, 'Anderson Silva', '1919191919', 'Descrição 49');
-INSERT INTO usuarios (id, nome, numero, descricao) VALUES (40, 'Tatiane Santos', '2020202020', 'Descrição 50');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Felipe Oliveira', '911111111', 'Descrição 31');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Juliana Santos', '222222222', 'Descrição 32');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Renato Silva', '913333333', 'Descrição 33');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Natália Pereira', '914444444', 'Descrição 34');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Thiago Lima', '555555555', 'Descrição 35');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Lívia Oliveira', '916666666', 'Descrição 36');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Pedro Santos', '777777777', 'Descrição 37');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Mariano Silva', '888888888', 'Descrição 38');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Vanessa Lima', '919999999', 'Descrição 39');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Beatriz Oliveira', '9110101010', 'Descrição 40');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Ricardo Santos', '1111111111', 'Descrição 41');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Aline Pereira', '9112121212', 'Descrição 42');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Luciana Lima', '1313131313', 'Descrição 43');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Gustavo Silva', '9114141414', 'Descrição 44');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Fernando Santos', '1515151515', 'Descrição 45');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Roberta Oliveira', '9116161616', 'Descrição 46');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Diego Lima', '9117171717', 'Descrição 47');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Carla Pereira', '1818181818', 'Descrição 48');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Anderson Silva', '9119191919', 'Descrição 49');
+INSERT INTO usuarios (id, nome, numero, descricao) VALUES (null, 'Tatiane Santos', '9120202020', 'Descrição 50');
 
 INSERT INTO texto (id, texto) VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
 INSERT INTO texto (id, texto) VALUES (2, 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
@@ -78,26 +78,47 @@ INSERT INTO arquivos (id, arquivo, dataehora) VALUES (18, 'texto3.txt', NOW());
 INSERT INTO arquivos (id, arquivo, dataehora) VALUES (19, 'apresentacao3.pptx', NOW());
 INSERT INTO arquivos (id, arquivo, dataehora) VALUES (20, 'audio3.mp3', NOW());
 
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (1, 21, 1, 1, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (2, 22, 2, 2, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (3, 23, 3, 3, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (4, 24, 4, 4, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (5, 25, 5, 5, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (6, 26, 6, 6, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (7, 27, 7, 7, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (8, 28, 8, 8, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (9, 29, 9, 9, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (10, 30, 10, 10, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (11, 31, 11, 11, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (12, 32, 12, 12, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (13, 33, 13, 13, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (14, 34, 14, 14, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (15, 35, 15, 15, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (16, 36, 16, 16, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (17, 37, 17, 17, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (18, 38, 18, 18, NOW(), 1);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (19, 39, 19, 19, NOW(), 0);
-INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (20, 40, 20, 20, NOW(), 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 21, 1, 1, '2024-01-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 22, 2, 2, '2024-01-21 22:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 23, 3, 3, '2024-01-24 10:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 24, 4, 4, '2024-01-25 12:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 25, 5, 5, '2024-01-24 10:30:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 26, 6, 6, '2024-01-23 1:45:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 27, 7, 7, '2024-01-20 3:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 28, 8, 8, '2024-01-21 2:15:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 29, 9, 9, '2024-01-20 6:40:05', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 30, 10, 10, '2024-01-24 18:09:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 31, 11, 11, '2024-01-23 11:55:15', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 32, 12, 12, '2024-01-24 6:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 33, 13, 13, '2024-01-25 5:15:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 34, 14, 14, '2024-01-22 6:01:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 35, 15, 15, '2024-01-21 8:00:20', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 36, 16, 16, '2024-01-20 7:00:30', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 37, 17, 17, '2024-01-22 7:02:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 38, 18, 18, '2024-01-23 1:01:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 39, 19, 19, '2024-01-24 2:47:08', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 40, 20, 20, '2024-01-25 16:34:00', 1);
+
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 21, 1, 1, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 22, 2, 2, '2024-04-21 22:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 23, 3, 3, '2024-03-24 10:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 24, 4, 4, '2024-08-25 12:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 25, 5, 5, '2024-12-24 10:30:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 26, 6, 6, '2024-12-23 1:45:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 27, 7, 7, '2024-12-20 3:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 28, 8, 8, '2024-11-21 2:15:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 29, 9, 9, '2024-11-20 6:40:05', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 30, 10, 10, '2024-08-24 18:09:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 31, 11, 11, '2024-08-23 11:55:15', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 32, 12, 12, '2024-08-24 6:00:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 33, 13, 13, '2024-03-25 5:15:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 34, 14, 14, '2024-02-22 6:01:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 35, 15, 15, '2024-07-21 8:00:20', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 36, 16, 16, '2024-08-20 7:00:30', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 37, 17, 17, '2024-12-22 7:02:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 38, 18, 18, '2024-02-23 1:01:00', 1);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 39, 19, 19, '2024-11-24 2:47:08', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (null, 40, 20, 20, '2024-11-25 16:34:00', 1);
 
 INSERT INTO amigosF (id, id_pessoa, id_amigo) VALUES (1, 21, 22);
 INSERT INTO amigosF (id, id_pessoa, id_amigo) VALUES (2, 23, 24);
@@ -141,26 +162,47 @@ INSERT INTO bloqueios (id, id_pessoa, id_bloqueado) VALUES (18, 28, 30);
 INSERT INTO bloqueios (id, id_pessoa, id_bloqueado) VALUES (19, 29, 31);
 INSERT INTO bloqueios (id, id_pessoa, id_bloqueado) VALUES (20, 30, 32);
 
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (1, 21, '2024-01-26 10:00:00', '2024-01-26 10:30:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (2, 22, '2024-01-26 11:15:00', '2024-01-26 11:45:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (3, 23, '2024-01-26 13:30:00', '2024-01-26 14:00:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (4, 24, '2024-01-26 15:45:00', '2024-01-26 16:15:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (5, 25, '2024-01-26 17:00:00', '2024-01-26 17:30:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (6, 26, '2024-01-26 09:00:00', '2024-01-26 09:30:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (7, 27, '2024-01-26 12:45:00', '2024-01-26 13:15:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (8, 28, '2024-01-26 14:30:00', '2024-01-26 15:00:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (9, 29, '2024-01-26 16:45:00', '2024-01-26 17:15:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (10, 30, '2024-01-26 10:45:00', '2024-01-26 11:15:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (11, 31, '2024-01-26 13:00:00', '2024-01-26 13:30:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (12, 32, '2024-01-26 15:15:00', '2024-01-26 15:45:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (13, 33, '2024-01-26 17:30:00', '2024-01-26 18:00:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (14, 34, '2024-01-26 09:30:00', '2024-01-26 10:00:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (15, 35, '2024-01-26 12:15:00', '2024-01-26 12:45:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (16, 36, '2024-01-26 14:00:00', '2024-01-26 14:30:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (17, 37, '2024-01-26 16:15:00', '2024-01-26 16:45:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (18, 38, '2024-01-26 10:30:00', '2024-01-26 11:00:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (19, 39, '2024-01-26 13:45:00', '2024-01-26 14:15:00');
-INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (20, 40, '2024-01-26 15:30:00', '2024-01-26 16:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 21, '2024-01-26 10:00:00', '2024-01-26 10:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 22, '2024-01-26 11:15:00', '2024-01-26 11:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 23, '2024-01-26 13:30:00', '2024-01-26 14:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 24, '2024-01-26 15:45:00', '2024-01-26 16:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 25, '2024-01-26 17:00:00', '2024-01-26 17:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 26, '2024-01-26 09:00:00', '2024-01-26 09:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 27, '2024-01-26 12:45:00', '2024-01-26 13:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 28, '2024-01-26 14:30:00', '2024-01-26 15:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 29, '2024-01-26 16:45:00', '2024-01-26 17:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 30, '2024-01-26 10:45:00', '2024-01-26 11:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 31, '2024-01-26 13:00:00', '2024-01-26 13:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 32, '2024-01-26 15:15:00', '2024-01-26 15:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 33, '2024-01-26 17:30:00', '2024-01-26 18:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 34, '2024-01-26 09:30:00', '2024-01-26 10:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 35, '2024-01-26 12:15:00', '2024-01-26 12:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 36, '2024-01-26 14:00:00', '2024-01-26 14:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 37, '2024-01-26 16:15:00', '2024-01-26 16:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 38, '2024-01-26 10:30:00', '2024-01-26 11:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 39, '2024-01-26 13:45:00', '2024-01-26 14:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 40, '2024-01-26 15:30:00', '2024-01-26 16:00:00');
+
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 21, '2024-11-26 10:00:00', '2024-01-26 10:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 22, '2024-12-26 11:15:00', '2024-01-26 11:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 23, '2024-12-26 13:30:00', '2024-01-26 14:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 24, '2024-08-26 15:45:00', '2024-01-26 16:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 25, '2024-09-26 17:00:00', '2024-01-26 17:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 26, '2024-08-26 09:00:00', '2024-01-26 09:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 27, '2024-07-26 12:45:00', '2024-01-26 13:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 28, '2024-08-26 14:30:00', '2024-01-26 15:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 29, '2024-09-26 16:45:00', '2024-01-26 17:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 30, '2024-12-26 10:45:00', '2024-01-26 11:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 31, '2024-11-26 13:00:00', '2024-01-26 13:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 32, '2024-12-26 15:15:00', '2024-01-26 15:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 33, '2024-08-26 17:30:00', '2024-01-26 18:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 34, '2024-01-26 09:30:00', '2024-01-26 10:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 35, '2024-09-26 12:15:00', '2024-01-26 12:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 36, '2024-02-26 14:00:00', '2024-01-26 14:30:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 37, '2024-04-26 16:15:00', '2024-01-26 16:45:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 38, '2024-03-26 10:30:00', '2024-01-26 11:00:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 39, '2024-04-26 13:45:00', '2024-01-26 14:15:00');
+INSERT INTO ligacoes (id, id_usuario, dhi, dhf) VALUES (null, 40, '2024-03-26 15:30:00', '2024-01-26 16:00:00');
 
 INSERT INTO mensagensF (id, id_usuario, id_mensagem) VALUES (1, 21, 1);
 INSERT INTO mensagensF (id, id_usuario, id_mensagem) VALUES (2, 22, 2);
@@ -225,6 +267,12 @@ INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (18, 28, 18);
 INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (19, 29, 19);
 INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (20, 30, 20);
 
+INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (null, 43, 1);
+INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (null, 44, 1);
+INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (null, 46, 1);
+INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (null, 49, 1);
+INSERT INTO membros_grupo (id, id_membros, id_grupo) VALUES (null, 41, 1);
+
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (1, 21, 1);
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (2, 22, 2);
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (3, 23, 3);
@@ -245,3 +293,59 @@ INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (17, 27, 17);
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (18, 28, 18);
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (19, 29, 19);
 INSERT INTO atualizacoes (id, id_usuario, id_mensagem) VALUES (20, 30, 20);
+
+-- select 1
+
+select t.texto, a.arquivo, u.nome
+from mensagens as m
+join arquivos as a
+on m.id_arquivo = a.id
+join texto as t
+on m.id_text = t.id
+join  usuarios as u
+_usuario
+where;
+
+-- select 2
+/*
+select
+from
+order by
+having
+order by
+limit
+*/
+
+/*
+liste as 10 mensagens mais antigas enviadas pelo gustavo;
+liste todos os usuarios de belem que estão no grupo1;
+liste os memes que sairam no grupo da disciplina;
+*/
+
+-- quest 1
+select u.nome
+from usuarios as u
+join membros_grupo as mg
+on mg.id_membros = u.id
+join grupos as g
+on mg.id_grupo = g.id 
+where u.numero like "91%" and g.grupo_nome = "grupo 1";
+
+select id, nome from usuarios where numero like "91%";
+
+
+
+INSERT INTO arquivos (id, arquivo, dataehora) VALUES (null, 'Ele Gosta.JPG', NOW());
+INSERT INTO arquivos (id, arquivo, dataehora) VALUES (null, 'Dança garinho, danca.JPG', NOW());
+INSERT INTO arquivos (id, arquivo, dataehora) VALUES (null, 'A lua me traiu.JPG', NOW());
+INSERT INTO arquivos (id, arquivo, dataehora) VALUES (null, 'LaEle.JPG', NOW());
+INSERT INTO arquivos (id, arquivo, dataehora) VALUES (null, 'OwMyGod.jpg', NOW());
+
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (120, 49, 1, 21, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (121, 44, 1, 25, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (122, 41, 1, 23, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (123, 44, 1, 22, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (124, 43, 1, 24, '2024-07-22 8:00:00', 0);
+INSERT INTO mensagens (id, id_usuario, id_text, id_arquivo, dataehora, estado) VALUES (125, 46, 1, 21, '2024-07-22 8:00:00', 0);
+
+/*
